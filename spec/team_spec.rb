@@ -29,7 +29,7 @@ RSpec.describe Team do
     expect(team.player_count).to eq(2)
   end
 
-  xit "has long_term players method " do
+  it "has long_term players method " do
 
     team = Team.new("Dodgers", "Los Angeles")
     player_1 = Player.new("Michael Palledorous" , 1000000, 36)
