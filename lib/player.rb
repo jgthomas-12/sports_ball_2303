@@ -1,5 +1,5 @@
 class Player
-  attr_reader :name
+  attr_reader :name, :monthly_cost, :contract_length
   def initialize(name, monthly_cost, contract_length)
     @name = name
     @monthly_cost = monthly_cost
@@ -11,7 +11,19 @@ class Player
     both << name.split(" ")
     both.flatten!
     both[0]
-    # require 'pry'; binding.pry
+  end
+  
+  def last_name
+    both = []
+    both << name.split(" ")
+    both.flatten!
+    both[1]
+    #refactor this to read middle names later
+  end
+
+  def total_cost
+    #Contract length is in months, and the total cost is the contract length multiplied by the monthly cost.
+    contract_length * monthly_cost
   end
   
 end
