@@ -44,7 +44,7 @@ RSpec.describe Player do
     expect(player.nickname).to eq(nil)
   end
 
-  xit "has a set nickname method" do 
+  it "has a set nickname method" do 
     player = Player.new("Michael Palledorous" , 1000000, 36)
     player.set_nickname!("Squints")
 
